@@ -1,0 +1,22 @@
+{
+  "name": "internship-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "build": "bun build src/index.ts --outdir dist",
+    "start": "bun run dist/index.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev"
+  },
+  "dependencies": {
+    "@elysiajs/jwt": "^1.0.6",
+    "@elysiajs/static": "^1.0.3",
+    "elysia": "^1.0.22",
+    "prisma": "^5.10.0",
+    "@prisma/client": "^5.10.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
