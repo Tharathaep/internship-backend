@@ -3,13 +3,10 @@ import { authModule } from "./modules/auth";
 import { studentModule } from "./modules/students";
 import { companyModule } from "./modules/companies";
 import { positionModule } from "./modules/positions";
-import { applicationModule } from "./modules/.applications";
+import { applicationModule } from "./modules/applications";
 import { reportModule } from "./modules/reports";
 
 const app = new Elysia()
-  .get("/", () => ({ message: "Internship API Running" }))
-
-  // ใช้ modules ทั้งหมด
   .use(authModule)
   .use(studentModule)
   .use(companyModule)
@@ -17,6 +14,4 @@ const app = new Elysia()
   .use(applicationModule)
   .use(reportModule);
 
-app.listen(3000);
-
-console.log(`🚀 Server running at http://localhost:3000`);
+export default app;
